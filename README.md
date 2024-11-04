@@ -4,5 +4,4 @@ WiFiCrack Assist is intended solely for educational purposes or testing environm
 
 ```bash
 git clone https://github.com/prakash-js/WifiCrack-Assist
-pip install -r requirements.txt
 python WifiCrack-Assist.py
