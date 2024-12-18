@@ -2,6 +2,9 @@ WiFiCrack-Assist is a Python-based tool designed to automate Wi-Fi password crac
 mportant: Ensure you have a Wi-Fi adapter that supports monitor mode before using this tool.
 WiFiCrack Assist is intended solely for educational purposes or testing environments where you have explicit permission to conduct penetration testing. Unauthorized use is strictly prohibited.
 
+
+`apt install qterminal`
+
 ```bash
 git clone https://github.com/prakash-js/WifiCrack-Assist
 python WifiCrack-Assist.py
