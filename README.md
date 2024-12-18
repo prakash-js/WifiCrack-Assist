@@ -3,8 +3,7 @@ mportant: Ensure you have a Wi-Fi adapter that supports monitor mode before usin
 WiFiCrack Assist is intended solely for educational purposes or testing environments where you have explicit permission to conduct penetration testing. Unauthorized use is strictly prohibited.
 
 
-`apt install qterminal`
-
 ```bash
+apt install qterminal
 git clone https://github.com/prakash-js/WifiCrack-Assist
 python WifiCrack-Assist.py
